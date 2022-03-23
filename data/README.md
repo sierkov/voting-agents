@@ -47,5 +47,7 @@ To analyze the targeted phenomena, a diverse set of preference data will be coll
 Preference data are extracted from Cardano Catalyst Community Advisor (CA) assessments, taking only assessors that provided not less than 45 assessments in Funds 6 and 7 cumulatively. The data was prepared in the following way:
 - A set of community-advisor ids with the necessary number of assessments in non-Challenge-Setting challenges are taken.
 - For each advisor, 45 assessments are randomly selected (without replacement): 30 for the training set, 5 for the validation set, and 10 for the test set.
+- Proposal titles are taken directly from the proposal title in the Ideascale.
+- Proposal descriptions are combined from Problem, Solution, Experience, and Detailed Plan Ideascale fields. After that HTML is stripped and duplicate whitespace is removed.
 - Within each subset (training, validation, and test set) all pairs of proposals are compared using the CA-provided scores.
 - Since CAs provide scores in three categories (Impact, Feasibility, and Accountability) the scores are combined according to the following formula: (Impact / 5) * (Feasibility / 5) * (Accountability / 5). This formula makes a stronger distinction between good and bad proposals in comparison to the arithmetic average of the three scores that are used by the Cardano Catalyst team.
