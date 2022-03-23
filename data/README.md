@@ -25,7 +25,9 @@ Please, note that since the data set is under active development not all phenome
 ## Data format
 The data set is organized around the decisions of individual voters. Each file is a list of preference decisions made by a single voter.
 For each voter, three files are provided: <voter>-train.json, <voter>-val.json, and <voter>-test.json.
-The considered proposals within each file are *not-intersecting*, meaning that the same proposal text shall never occur in two files of the same voter
+The considered proposals within each file are *not-intersecting*, meaning that the same proposal text shall never occur in two files of the same voter.
+
+Please, note that [Git LFS plugin](https://git-lfs.github.com/) is needed to work with the data archives (*.tar.xz files).
 
 ### Storage format
 - title_1 - a title of Proposal 1.
