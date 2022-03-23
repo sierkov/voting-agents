@@ -1,9 +1,8 @@
 # Voting Agents Dataset
-The data set has been created based on the Cardano Catalyst proposals presented in Funds 4, 5, 6, and 7.
 
-## Version and status
-This is an initial version of the data set. It is "under development", which means that the data is not final and subject to change.
-The data is provided on as is basis in the hope that it can be helpful.
+## Version and Status
+This is an initial version of the data set. It is under active development, which means that the data are subject to change.
+The data set is provided "as is" in the hope that it can be useful but without any guarantees.
 
 ## Analyzed Phonomena
 In the first version of the data set, we'd like to analyze the following phenomena:
@@ -12,15 +11,14 @@ In the first version of the data set, we'd like to analyze the following phenome
 - The impact of proposal novelty on the ability to learn voter preferences.
 - Technical: the impact of the proposal size on the ability to learn voter preferences.
 - Technical: the impact of the writing style on the ability to learn voter preferences.
-- Technical: the impact of the number of available hisorical votes on the ability to learn voter preferences.
+- Technical: the impact of the number of available historical votes on the ability to learn voter preferences.
 
-Please, note that since the data set is under active development not all phenomena have been reflected in the data set yet.
+Please, note that since the data set is under active development, not all phenomena have been reflected in the data set yet.
 
 ## Approach
-- A set of textual proposals covering diverse social topics.
-- A set of sythetic voters that precisely follow one of major idealogies.
-- A set of real voters who are not required to be systematic or follow a given ideology.
-- A set of proposals is set aside and never appears in the training data to test the ability of models to generalize the learnings to completely new proposals.
+- Collect proposals covering the broadest possible set of social topics that can be realistically considered for funding.
+- Include synthetic voter data that precisely follow one of the major ideologies to test the ability to distinguish higher-level concepts.
+- Include real voter data that is not required to be systematic or non-contradictory to ensure that the technology can work in the real world.
 
 ## Data format
 The data set is organized around the decisions of individual voters. Each file is a list of preference decisions made by a single voter.
@@ -30,22 +28,24 @@ The considered proposals within each file are *not-intersecting*, meaning that t
 Please, note that [Git LFS plugin](https://git-lfs.github.com/) is needed to work with the data archives (*.tar.xz files).
 
 ### Storage format
-- title_1 - a title of Proposal 1.
-- description_1 - a textual description of Proposal 1.
-- title_2 - a title of Proposal 2.
-- description_2 - a textual description of Proposal 2.
-- preference - "proposal_1", "proposal_2" or "indifferent"
-  - "proposal_1" - Proposal 1 is preferred to Proposal 2
-  - "proposal_2" - Proposal 2 is preferred to Proposal 1.
-  - "indifferent" - the voter does not have a clear preference.
+All data is stored in JSON files as an array of objects. Each array must contain at least one record.
+Each record is an indivudal pair-wise ranking decision, answering the question "Which proposal of the two is more deserving to be funded?"
+Each object has the following attributes:
+- title_1 - a title of the first proposal to be compared.
+- description_1 - a textual description of the first proposal.
+- title_2 - a title of the second proposal.
+- description_2 - a textual description of the second proposal.
+- preference - the decision of a voter. It can contain only one of three values:
+  - "proposal_1" - the first proposal is preferred by the voter.
+  - "proposal_2" - the second proposal is preferred by the voter.
+  - "indifferent" - the voter does not have a clear preference between the two proposals.
 
 ### Data Slices
-To analyze the targeted phenomena, a diverse set of preference data will be collected. To make the sources of the data clear, we separate the voter data in slices accoring to the respective data sources. At the moment the following slices / independent sources are present:
+To analyze the targeted phenomena, a diverse set of preference data will be collected. To make the sources of the data clear, we separate the voter data into slices according to the respective data sources. At the moment the following slices / independent sources are present:
 
 #### Catalyst-CA-45
-
-Preference data are extracted from Cardano Catalyst Community Advisor (CA), taking assessments of assessors that not less than 45 assessments in Funds 6 and 7 cumulatively. The data was prepared in the following way:
-- A set of community advisor ids with the necessary number of assessments in non Challenge-Setting challenges are taken.
-- For each advisor, 45 assessment are randomly selected (without replacement): 30 for the training set, 5 for the validation set, and 10 for the test set.
-- Within each subset (training, validation, and test set) all pairs of proposals are compared using the CA provided scores.
-- Since CAs provide scores in three categories (Impact, Feasbility, and Accountability) the scores are compbined according to the following formula: (Impact / 5) * (Feasibility / 5) * (Accountability / 5). This formula makes a stronger distinction between good and bad proposals in comparison to the arithmetic average of the three scores that is used by the Cardano Catalyst team.
+Preference data are extracted from Cardano Catalyst Community Advisor (CA) assessments, taking only assessors that provided not less than 45 assessments in Funds 6 and 7 cumulatively. The data was prepared in the following way:
+- A set of community-advisor ids with the necessary number of assessments in non-Challenge-Setting challenges are taken.
+- For each advisor, 45 assessments are randomly selected (without replacement): 30 for the training set, 5 for the validation set, and 10 for the test set.
+- Within each subset (training, validation, and test set) all pairs of proposals are compared using the CA-provided scores.
+- Since CAs provide scores in three categories (Impact, Feasibility, and Accountability) the scores are combined according to the following formula: (Impact / 5) * (Feasibility / 5) * (Accountability / 5). This formula makes a stronger distinction between good and bad proposals in comparison to the arithmetic average of the three scores that are used by the Cardano Catalyst team.

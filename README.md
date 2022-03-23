@@ -1,7 +1,7 @@
 # Voting Agents
 
-## How Voting Agents make Direct Democracy scalable
-One of the biggest problems of the direct-democracy approach to governance is the extreme need for the time of voters to review and analyze proposals. A proposal flow of just a few hundred per month can easily consume the time of the whole society if every voter needs to analyze every proposal.
+## Voting Agents and Scalable Direct Democracy
+One of the biggest problems of the direct-democracy approach to governance is the extremely high requirements for the time of voters to review and analyze proposals. Reviewing just a hundred proposals per month can easily consume the time of the whole society if every voter needs to analyze every proposal. However, to run even moderately-populated cities many more decisions need to be made monthly.
 
 The idea behind Voting Agents is that the preferences of most voters can be learned over time from their previous decisions. This means that in cases when a voter does not have time or is not particularly interested in certain proposals, a voting agent can represent the voter. This makes Direct Democracy scalable to any number of proposals:
 - all proposals get feedback from all voters so that the authors can learn and improve;
@@ -11,16 +11,16 @@ The idea behind Voting Agents is that the preferences of most voters can be lear
 ## Project Structure
 
 ### Data set
-The Voting-Agents data set provides a reproducible playground to train, analyze, and evaluate approaches to learning a voter's preferences from the historical votes. The guiding principles used to create the data set are described in the [Voting Agents Dataset documentation](doc/dataset.md)
+The Voting-Agents data set provides a reproducible playground to train, analyze, and evaluate approaches to learning voter preferences from the historical votes. The guiding principles used to create the data set are described in the [Voting Agents Dataset documentation](data/README.md)
 
-### ML Models - Not Available Yet
+### ML Models - Coming Soon
 Sample implementations of machine-learning models of Voting Agents.
 
-### User Interface - Not Available Yet
+### User Interface - Coming Soon
 A user interface for voters to analyze proposals, provide their preferences, and evaluate their voting agents.
 
 ## License
-The code and documentation of this project are distributed under the [GNU GENERAL PUBLIC LICENSE version 3](LICENSE).
+The code and documentation of this project are distributed under the [GNU GENERAL PUBLIC LICENSE Version 3](LICENSE).
 3rd-party assets are distributed under their respective licenses.
 
 ## Sponsors
