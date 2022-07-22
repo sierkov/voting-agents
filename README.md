@@ -16,8 +16,10 @@ The Voting-Agents data set provides a reproducible playground to train, analyze,
 ### ML Models - Coming Soon
 Sample implementations of machine-learning models of Voting Agents.
 
-### User Interface - Coming Soon
+### User Interface
 A user interface for voters to analyze proposals, provide their preferences, and evaluate their voting agents.
+The latest technical demo is available at [votingagents.org](https://votingagents.org/).
+The source code will be published later after it is good enough for a release.
 
 ## License
 The code and documentation of this project are distributed under the [GNU GENERAL PUBLIC LICENSE Version 3](LICENSE).
