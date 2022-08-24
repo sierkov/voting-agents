@@ -7,6 +7,8 @@ Currently, we have selected Sentence Transformers and SetFit as the approach. Mo
 - [Sentence Transformer Fine-Tuning (SetFit): Outperforming GPT-3 on few-shot Text-Classification while being 1600 times smaller](https://towardsdatascience.com/sentence-transformer-fine-tuning-setfit-outperforms-gpt-3-on-few-shot-text-classification-while-d9a3788f0b4e)
 - [SentenceTransformers Documentation](https://www.sbert.net/)
 
+# Models for the four proposal discovery methods
+
 ## Semantic Search
 To provide semantic search results, we use a custom model trained on [MSMarco dataset](https://www.sbert.net/examples/training/ms_marco/README.html).
 
@@ -15,8 +17,11 @@ To identify similar proposals, we use embeddings produced by a Sentence-Transfor
 
 ## Personalized Proposal Recommendations
 We use two approaches to provide personalized recommendations:
-- For cases requiring immediate updates, such as UI Recommendations to support proposal discovery, we use precomputed embeddings produced by a Sentence Transfomer model with aLogistic Regression classifier on top.
+- For cases requiring immediate updates, such as UI Recommendations to support proposal discovery, we use precomputed embeddings produced by a Sentence Transfomer model with a Logistic Regression classifier on top.
 - To produce higher-quality recommendations but at much higher computational cost, [Cross-Encoder](https://www.sbert.net/examples/training/cross-encoder/README.html) approach is used.
+
+You can find the code for personalized ranking (the fast model) in the ```personalied_ranking_updater``` function of the API: [Personalized Ranking Updater](../api/api.py)
 
 ## Proposal Classification
 For the proposal classification, we use the SetFit approach referenced above.
+The categories were manually selected after a careful review of existing Catalyst proposals.
