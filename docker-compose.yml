@@ -1,0 +1,35 @@
+version: '3'
+services:
+  db: 
+    image: postgres:14-alpine
+    restart: "no"
+    environment:
+      POSTGRES_USER: va
+      POSTGRES_PASSWORD: 202207
+      POSTGRES_DB: vadb
+    volumes:
+    - "./db/init:/docker-entrypoint-initdb.d"
+    - "db_data:/var/lib/postgresql/data"
+  dev:
+    image: sierkov/voting-agents
+    restart: "no"
+    build: .
+    shm_size: 2gb
+    ports:
+    - "127.0.0.1:8888:8888"
+    - "127.0.0.1:12345:12345"
+    - "127.0.0.1:3000:3000"
+    volumes:
+    - "./:/workspace"
+    - "C:/ds:/data"
+    - vscode-ext:/home/dev/.vscode-server/extensions
+    - //var/run/docker.sock://var/run/docker.sock
+    deploy:
+      resources:
+        reservations:
+          devices:
+          - driver: nvidia
+            capabilities: [gpu]
+volumes:
+ vscode-ext:
+ db_data:

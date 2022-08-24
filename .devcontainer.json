@@ -1,0 +1,10 @@
+{
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "dev",
+    "workspaceFolder": "/workspace",
+    "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+    ],
+    "remoteUser": "dev"
+}

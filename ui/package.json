@@ -1,0 +1,37 @@
+{
+	"name": "ui-ranking",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "svelte-kit dev --host 0.0.0.0",
+		"build": "svelte-kit build",
+		"package": "svelte-kit package",
+		"preview": "svelte-kit preview --host 0.0.0.0",
+		"prepare": "svelte-kit sync && npm run smui-theme",
+		"smui-theme": "smui-theme compile static/smui.css -i src/theme"
+	},
+	"devDependencies": {
+		"@emurgo/cardano-serialization-lib-nodejs": "^10.2.0",
+		"@smui/button": "^6.0.0-beta.16",
+		"@smui/drawer": "^6.0.0-beta.16",
+		"@smui/icon-button": "^6.0.0-beta.16",
+		"@smui/list": "^6.0.0-beta.16",
+		"@smui/menu": "^6.0.0-beta.16",
+		"@smui/select": "^6.0.0-beta.16",
+		"@smui/tab": "^6.0.0-beta.16",
+		"@smui/tab-bar": "^6.0.0-beta.16",
+		"@smui/tooltip": "^6.0.0-beta.16",
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/kit": "next",
+		"cookie": "^0.5.0",
+		"random-seedable": "^1.0.8",
+		"safe-stable-stringify": "^2.3.1",
+		"sass": "^1.49.11",
+		"smui-theme": "^6.0.0-beta.16",
+		"svelte": "^3.47.0",
+		"svelte-preprocess": "^4.10.5"
+	},
+	"type": "module",
+	"dependencies": {
+		"postgres": "^3.2.4"
+	}
+}

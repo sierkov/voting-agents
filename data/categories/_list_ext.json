@@ -1,0 +1,87 @@
+{
+  "": {
+    "name": "uncategorized",
+    "icon": "question_mark",
+    "color": "#000000"
+  },
+  "agriculture-food-production": {
+    "name": "agriculture & food production",
+    "icon": "lunch_dining",
+    "color": "#FFB300"
+  },
+  "certification-standards": {
+    "name": "certification & standards",
+    "icon": "badge",
+    "color": "#803E75"
+  },
+  "commerce-trade": {
+    "name": "commerce & trade",
+    "icon": "shopping_cart",
+    "color": "#FF6800"
+  },
+  "communication-engagement": {
+    "name": "communication & engagement",
+    "icon": "phone_in_talk",
+    "color": "#A6BDD7"
+  },
+  "education": {
+    "name": "education",
+    "icon": "school",
+    "color": "#C10020"
+  },
+  "energy": {
+    "name": "energy",
+    "icon": "bolt",
+    "color": "#CEA262"
+  },
+  "financial-system": {
+    "name": "financial system",
+    "icon": "credit_card",
+    "color": "#817066"
+  },
+  "governance-legal-system": {
+    "name": "governance & legal system",
+    "icon": "gavel",
+    "color": "#007D34"
+  },
+  "healthcare-wellbeing": {
+    "name": "healthcare & wellbeing",
+    "icon": "medical_services",
+    "color": "#F6768E"
+  },
+  "housing-real-estate": {
+    "name": "housing & real estate",
+    "icon": "house",
+    "color": "#00538A"
+  },
+  "knowledge-management-information-access": {
+    "name": "knowledge management & software",
+    "icon": "library_books",
+    "color": "#FF7A5C"
+  },
+  "labor-market-relations": {
+    "name": "labor & productivity",
+    "icon": "business_center",
+    "color": "#53377A"
+  },
+  "manufacturing": {
+    "name": "manufacturing",
+    "icon": "factory",
+    "color": "#FF8E00"
+  },
+  "protection-of-fundamental-human-needs": {
+    "name": "protection of human needs",
+    "icon": "self_improvement",
+    "color": "#B32851"
+  },
+  "security-environment": {
+    "name": "security & environment",
+    "icon": "security",
+    "color": "#F4C800"
+  },
+  "transportation": {
+    "name": "transportation",
+    "icon": "flight",
+    "color": "#7F180D"
+  }
+}
