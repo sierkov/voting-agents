@@ -28,6 +28,9 @@ More information the ML models can be found in the [README file for Machine Lear
 ### Data set
 The Voting-Agents a sample data set suitable as a reproducible playground to train, analyze, and evaluate approaches to learning voter preferences from the historical votes. The guiding principles used to create the data set are described in the [Voting Agents Dataset documentation](data/README.md)
 
+### Workflow documentation
+You can find the description of the complete funding workflow in the [Funding workflow documentation](doc/workflow.md)
+
 ## License
 The code and documentation of this project are distributed under the [GNU GENERAL PUBLIC LICENSE Version 3](LICENSE).
 3rd-party assets are distributed under their respective licenses.
